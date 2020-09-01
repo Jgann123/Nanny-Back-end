@@ -1,6 +1,9 @@
 package com.models;
 
-import jdk.jfr.events.CertificateId;
+import java.util.Objects;
+
+import org.springframework.data.annotation.Id;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection = "families")
 public class Families {
@@ -8,7 +11,7 @@ public class Families {
     public String id;
     public String firstName;
     public String lastName;
-    public Int members;
+    public Integer members;
     public String story;
     public String phoneNumbeString;
 
@@ -16,7 +19,7 @@ public class Families {
     public Families() {
     }
 
-    public Families(String id, String firstName, String lastName, Int members, String story, String phoneNumbeString) {
+    public Families(String id, String firstName, String lastName, Integer members, String story, String phoneNumbeString) {
         this.id = id;
         this.firstName = firstName;
         this.lastName = lastName;
@@ -49,11 +52,11 @@ public class Families {
         this.lastName = lastName;
     }
 
-    public Int getMembers() {
+    public Integer getMembers() {
         return this.members;
     }
 
-    public void setMembers(Int members) {
+    public void setMembers(Integer members) {
         this.members = members;
     }
 
@@ -88,7 +91,7 @@ public class Families {
         return this;
     }
 
-    public Families members(Int members) {
+    public Families members(Integer members) {
         this.members = members;
         return this;
     }

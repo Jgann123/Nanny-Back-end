@@ -10,4 +10,4 @@ public class FinApplication {
 		SpringApplication.run(FinApplication.class, args);
 	}
 
-}
+} 
