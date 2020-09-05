@@ -106,32 +106,6 @@ public class Families {
         return this;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (o == this)
-            return true;
-        if (!(o instanceof Families)) {
-            return false;
-        }
-        Families families = (Families) o;
-        return Objects.equals(id, families.id) && Objects.equals(firstName, families.firstName) && Objects.equals(lastName, families.lastName) && Objects.equals(members, families.members) && Objects.equals(story, families.story) && Objects.equals(phoneNumbeString, families.phoneNumbeString);
-    }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(id, firstName, lastName, members, story, phoneNumbeString);
-    }
-
-    @Override
-    public String toString() {
-        return "{" +
-            " id='" + getId() + "'" +
-            ", firstName='" + getFirstName() + "'" +
-            ", lastName='" + getLastName() + "'" +
-            ", members='" + getMembers() + "'" +
-            ", story='" + getStory() + "'" +
-            ", phoneNumbeString='" + getPhoneNumbeString() + "'" +
-            "}";
-    }
 
 }
